@@ -11,8 +11,8 @@ EXCLUDE_PREFIXES = [".", "/dev/", "/home/", "/proc/" "/sys/", "/etc/", "/run/"]
 
 def create_tar(file_list):
 
-    tmp_tar_file = NamedTemporaryFile(delete=False)
-    with tarfile.open(tmp_tar_file.name, "w") as tar:
+    tmp_tar_file = NamedTemporaryFile(delete=False, suffix=".tgz")
+    with tarfile.open(tmp_tar_file.name, "w:gz") as tar:
         while len(file_list) > 0:
             name = file_list[0]
             file_list.remove(name)

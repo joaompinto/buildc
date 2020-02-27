@@ -11,13 +11,12 @@ class FILETRACER_OPTIONS:
 
 def main():
     options, args = parse_cmd_line()
-    output_dir = args[0]
-    command_args = args[1:]
-    file_list = FileRunTracer(FILETRACER_OPTIONS, command_args).run()
+    file_list = FileRunTracer(FILETRACER_OPTIONS, args).run()
     tar_file_name = create_tar(file_list)
-    bundle_dir = extract_tar(tar_file_name, output_dir, options.force)
-    create_config_json(bundle_dir, command_args)
-    print(bundle_dir)
+    print(f"You can now run:\n\tdocker import {tar_file_name}")
+    #bundle_dir = extract_tar(tar_file_name, output_dir, options.force)
+    #create_config_json(bundle_dir, command_args)
+    #print(bundle_dir)
 
 
 if __name__ == "__main__":

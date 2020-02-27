@@ -11,7 +11,7 @@ def parse_cmd_line():
         default=False,
     )
     options, args = parser.parse_args()
-    if len(args) < 2:
-        print("Usage: {} output_directory -- command".format(sys.argv[0]))
+    if len(args) == 0:
+        print("Usage: {} -- command".format(sys.argv[0]))
         exit(1)
     return options, args
