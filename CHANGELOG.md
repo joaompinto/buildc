@@ -1,20 +1,8 @@
 # CHANGELOG
 
-## 0.0.4 Unpublished
+## 0.0.2 Unpublished
 
-* buildcr run() returns list for integration as a library
-
-## 0.0.3
-
-* Add --exclude pattern1:pattern1 to exclude paths begining with pattern
-* Add --live for live tracking (disable by default)
-* Add --output to use an output file
-* Fix filename argument lookup
-
-## 0.0.2
-
-* Track child processes
-* Add instructions now hot to run from source
+* Removed unimplemented options from te CLI
 
 ## 0.0.1
 
